@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "https://php.ninjapizza.com.ua/images/1/l2x.webp?ver=v1.0.6",
+    "title": "М'ясна з солодким чилі",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 100,
+    "category": 0,
+    "rating": 1
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://php.ninjapizza.com.ua/images/2/l2x.webp?ver=v1.0.6",
+    "title": "Телятина і Ворчестер",
+    "types": [0, 1],
+    "sizes": [26, 30],
+    "price": 95,
+    "category": 0,
+    "rating": 2
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://php.ninjapizza.com.ua/images/4/l2x.webp?ver=v1.0.6",
+    "title": "З ковбасками і фламбе",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 110,
+    "category": 0,
+    "rating": 3
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://php.ninjapizza.com.ua/images/5/l2x.webp?ver=v1.0.6",
+    "title": "Том Ям",
+    "types": [0],
+    "sizes": [26, 30, 40],
+    "price": 130,
+    "category": 0,
+    "rating": 4
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://php.ninjapizza.com.ua/images/6/l2x.webp?ver=v1.0.6",
+    "title": "З лососем і манго",
+    "types": [0],
+    "sizes": [30, 40],
+    "price": 170,
+    "category": 0,
+    "rating": 5
+  }
+]
