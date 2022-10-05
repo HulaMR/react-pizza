@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import React from 'react';
 
 function Categories() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = React.useState(0);
 
   const categories = ['Всі', "М'ясні", 'Вегатаріанські', 'Морепродукти', 'Гострі'];
 
