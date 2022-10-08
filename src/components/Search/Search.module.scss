@@ -1,0 +1,79 @@
+.root {
+  position: relative;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  opacity: 0.4;
+  position: absolute;
+  left: 11px;
+  top: 12px;
+}
+
+.input {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 20px;
+  padding-left: 42px;
+
+  border-radius: 10px;
+  font-size: 20px;
+  width: 300px;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+  }
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    border: 2px solid #59aec3;
+    width: 400px;
+  }
+
+  @media (max-width: 1050px) {
+    width: 200px;
+    &:focus,
+    &:not(:placeholder-shown) {
+      width: 300px;
+    }
+  }
+  @media (max-width: 920px) {
+    width: 200px;
+    &:focus,
+    &:not(:placeholder-shown) {
+      width: 250px;
+    }
+  }
+  @media (max-width: 700px) {
+    width: 300px;
+    &:focus,
+    &:not(:placeholder-shown) {
+      width: 400px;
+    }
+  }
+  @media (max-width: 500px) {
+    width: 230px;
+    &:focus,
+    &:not(:placeholder-shown) {
+      width: 300px;
+    }
+  }
+}
+
+.clear {
+  width: 24px;
+  height: 24px;
+  opacity: 0.4;
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+    path {
+      fill: #59aec3;
+    }
+  }
+}

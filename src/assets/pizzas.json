@@ -2,11 +2,11 @@
   {
     "id": 1,
     "imageUrl": "https://php.ninjapizza.com.ua/images/1/l2x.webp?ver=v1.0.6",
-    "title": "М'ясна з солодким чилі",
+    "title": "Пепероні",
     "types": [0, 1],
     "sizes": [26, 30, 40],
     "price": 100,
-    "category": 0,
+    "category": 1,
     "rating": 1
   },
   {
@@ -16,7 +16,7 @@
     "types": [0, 1],
     "sizes": [26, 30],
     "price": 95,
-    "category": 0,
+    "category": 1,
     "rating": 2
   },
   {
@@ -26,17 +26,17 @@
     "types": [0, 1],
     "sizes": [26, 30, 40],
     "price": 110,
-    "category": 0,
+    "category": 1,
     "rating": 3
   },
   {
     "id": 4,
     "imageUrl": "https://php.ninjapizza.com.ua/images/5/l2x.webp?ver=v1.0.6",
-    "title": "Том Ям",
+    "title": "Том Ям 🌶️",
     "types": [0],
     "sizes": [26, 30, 40],
     "price": 130,
-    "category": 0,
+    "category": [3, 4],
     "rating": 4
   },
   {
@@ -46,7 +46,47 @@
     "types": [0],
     "sizes": [30, 40],
     "price": 170,
-    "category": 0,
+    "category": 3,
     "rating": 5
+  },
+  {
+    "id": 6,
+    "imageUrl": "https://php.ninjapizza.com.ua/images/20/l2x.webp?ver=v1.0.6",
+    "title": "Італійський бекон",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 120,
+    "category": 1,
+    "rating": 6
+  },
+  {
+    "id": 7,
+    "imageUrl": "https://php.ninjapizza.com.ua/images/13/l2x.webp?ver=v1.0.6",
+    "title": "М'ясна з солодким чилі",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 110,
+    "category": 1,
+    "rating": 7
+  },
+  {
+    "id": 8,
+    "imageUrl": "https://php.ninjapizza.com.ua/images/10/l2x.webp?ver=v1.0.6",
+    "title": "Пепероні з медом 🌶️",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 125,
+    "category": 4,
+    "rating": 8
+  },
+  {
+    "id": 9,
+    "imageUrl": "https://php.ninjapizza.com.ua/images/9/l2x.webp?ver=v1.0.6",
+    "title": "Маргарита",
+    "types": [0],
+    "sizes": [26, 30, 40],
+    "price": 80,
+    "category": 2,
+    "rating": 9
   }
 ]
