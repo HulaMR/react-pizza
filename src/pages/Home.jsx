@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Categories from '../components/Categories';
 import Sort from '../components/Sort';
@@ -9,15 +10,23 @@ import NotFound from './NotFound';
 
 import { SearchContext } from '../App';
 
+import { setCategoryId } from '../redux/slices/filterSlice';
+
 const url = 'https://633b340a471b8c39557e7c35.mockapi.io';
 
 function Home() {
+  const dispatch = useDispatch();
+  const categoryId = useSelector((state) => state.filterSlice.categoryId);
+
+  const onChangeCategory = (id) => {
+    dispatch(setCategoryId(id));
+  };
+
   const { searchValue } = React.useContext(SearchContext);
 
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
 
-  const [categoryId, setCategoryId] = React.useState(0);
   const [sortType, setSortType] = React.useState({ name: 'популярністю↑', sortProperty: 'rating' });
 
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -52,7 +61,7 @@ function Home() {
   return (
     <div className="container">
       <div className="content__top">
-        <Categories value={categoryId} onChangeCategory={(id) => setCategoryId(id)} />
+        <Categories value={categoryId} onChangeCategory={onChangeCategory} />
         <Sort value={sortType} onChangeSort={(id) => setSortType(id)} />
       </div>
       <h2 className="content__title">Всі піци</h2>
