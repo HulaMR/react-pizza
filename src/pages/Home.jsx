@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import axios from 'axios';
 import qs from 'qs';
 
 import Categories from '../components/Categories';
@@ -15,8 +14,7 @@ import NotFound from './NotFound';
 import { SearchContext } from '../App';
 
 import { setCategoryId, setCurrentPage, setFilters } from '../redux/slices/filterSlice';
-
-const url = 'https://633b340a471b8c39557e7c35.mockapi.io';
+import { fetchPizzas } from '../redux/slices/pizzaSlice';
 
 function Home() {
   const navigate = useNavigate();
@@ -25,6 +23,7 @@ function Home() {
   const isMounted = React.useRef(false);
 
   const { categoryId, sort, currentPage } = useSelector((state) => state.filter);
+  const { items, status } = useSelector((state) => state.pizza);
   const sortType = sort.sortProperty;
 
   const onChangeCategory = (id) => {
@@ -37,26 +36,17 @@ function Home() {
 
   const { searchValue } = React.useContext(SearchContext);
 
-  const [items, setItems] = React.useState([]);
-  const [isLoading, setIsLoading] = React.useState(true);
-
-  const fetchPizzas = () => {
-    setIsLoading(true);
+  const getPizzas = async () => {
+    const url = 'https://633b340a471b8c39557e7c35.mockapi.io';
 
     const category = categoryId > 0 ? `&category=${categoryId}` : ``;
     const search = searchValue ? `&title=${searchValue}` : ``;
     const sortBy = sortType.replace('-', '');
     const order = sortType.includes('-') ? 'desc' : 'asc';
 
-    axios
-      .get(
-        url +
-          `/items?page=${currentPage}&limit=4${search}${category}&sortBy=${sortBy}&order=${order}`,
-      )
-      .then((res) => {
-        setItems(res.data);
-        setIsLoading(false);
-      });
+    const urlVar = `/items?page=${currentPage}&limit=4${search}${category}&sortBy=${sortBy}&order=${order}`;
+
+    dispatch(fetchPizzas({ url, urlVar }));
   };
 
   // Якщо була зміна параметрів і був перший рендер
@@ -91,7 +81,7 @@ function Home() {
   // якщо був перший рендер, то робим запрос піц
   React.useEffect(() => {
     if (!isSearch.current) {
-      fetchPizzas();
+      getPizzas();
     }
     isSearch.current = false;
   }, [categoryId, sortType, searchValue, currentPage]);
@@ -111,7 +101,7 @@ function Home() {
         <Sort />
       </div>
       <h2 className="content__title">Всі піци</h2>
-      <div className="content__items">{isLoading ? skeletons : pizzasResult}</div>
+      <div className="content__items">{status === 'loading' ? skeletons : pizzasResult}</div>
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
     </div>
   );
