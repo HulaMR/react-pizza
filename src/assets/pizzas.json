@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "imageUrl": "https://php.ninjapizza.com.ua/images/1/l2x.webp?ver=v1.0.6",
     "title": "Пепероні",
     "types": [0, 1],
@@ -10,7 +10,7 @@
     "rating": 1
   },
   {
-    "id": 2,
+    "id": "2",
     "imageUrl": "https://php.ninjapizza.com.ua/images/2/l2x.webp?ver=v1.0.6",
     "title": "Телятина і Ворчестер",
     "types": [0, 1],
@@ -20,7 +20,7 @@
     "rating": 2
   },
   {
-    "id": 3,
+    "id": "3",
     "imageUrl": "https://php.ninjapizza.com.ua/images/4/l2x.webp?ver=v1.0.6",
     "title": "З ковбасками і фламбе",
     "types": [0, 1],
@@ -30,7 +30,7 @@
     "rating": 3
   },
   {
-    "id": 4,
+    "id": "4",
     "imageUrl": "https://php.ninjapizza.com.ua/images/5/l2x.webp?ver=v1.0.6",
     "title": "Том Ям 🌶️",
     "types": [0],
@@ -40,7 +40,7 @@
     "rating": 4
   },
   {
-    "id": 5,
+    "id": "5",
     "imageUrl": "https://php.ninjapizza.com.ua/images/6/l2x.webp?ver=v1.0.6",
     "title": "З лососем і манго",
     "types": [0],
@@ -50,7 +50,7 @@
     "rating": 5
   },
   {
-    "id": 6,
+    "id": "6",
     "imageUrl": "https://php.ninjapizza.com.ua/images/20/l2x.webp?ver=v1.0.6",
     "title": "Італійський бекон",
     "types": [0, 1],
@@ -60,7 +60,7 @@
     "rating": 6
   },
   {
-    "id": 7,
+    "id": "7",
     "imageUrl": "https://php.ninjapizza.com.ua/images/13/l2x.webp?ver=v1.0.6",
     "title": "М'ясна з солодким чилі",
     "types": [0, 1],
@@ -70,7 +70,7 @@
     "rating": 7
   },
   {
-    "id": 8,
+    "id": "8",
     "imageUrl": "https://php.ninjapizza.com.ua/images/10/l2x.webp?ver=v1.0.6",
     "title": "Пепероні з медом 🌶️",
     "types": [0, 1],
@@ -80,7 +80,7 @@
     "rating": 8
   },
   {
-    "id": 9,
+    "id": "9",
     "imageUrl": "https://php.ninjapizza.com.ua/images/9/l2x.webp?ver=v1.0.6",
     "title": "Маргарита",
     "types": [0],

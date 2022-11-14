@@ -13,6 +13,7 @@ export const filterSlice = createSlice({
   reducers: {
     setSearchValue(state, action) {
       state.searchValue = action.payload;
+      state.currentPage = 1;
     },
     setCategoryId(state, action) {
       state.categoryId = action.payload;
